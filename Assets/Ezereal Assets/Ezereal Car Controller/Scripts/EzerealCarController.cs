@@ -480,7 +480,7 @@ namespace Ezereal
             float rotation = Mathf.Lerp(maxSteeringWheelRotation, -maxSteeringWheelRotation, (normalizedSteerAngle + maxSteerAngle) / (2 * maxSteerAngle));
 
             // Set the local rotation of the steering wheel
-            steeringWheel.localRotation = Quaternion.Euler(currentXAngle, 0, rotation);
+            steeringWheel.localRotation = Quaternion.Euler(-rotation, -20, 0);
         }
 
         void UpdateGearText(string gear)
